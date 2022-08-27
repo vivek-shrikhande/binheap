@@ -97,7 +97,9 @@ class TestMinHeap:
             if new_item in items:
                 continue
 
-            assert min_heap.push_pop(new_item) == heapq.heappushpop(heapq_heap, new_item)
+            assert min_heap.push_pop(new_item) == heapq.heappushpop(
+                heapq_heap, new_item
+            )
             break
 
         # element that already exist and min

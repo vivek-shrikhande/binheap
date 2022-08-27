@@ -2,9 +2,6 @@ import heapq
 from typing import List
 
 
-
-
-
 class Heap:
     def __init__(self, seq=()):
         self._heap: List = list(seq)

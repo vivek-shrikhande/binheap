@@ -4,7 +4,6 @@ from binheap import heapsort
 
 
 class TestHeapSort:
-
     def test_heapsort(self):
         items = [randrange(100) for _ in range(100)]
 

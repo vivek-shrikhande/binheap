@@ -86,7 +86,9 @@ class TestMaxHeap:
 
         # element that doesn't exist and min of all the items
         new_item = min(items) - 1
-        assert max_heap.push_pop(new_item) == un_negate(heapq.heappushpop(heapq_heap, new_item))
+        assert max_heap.push_pop(new_item) == un_negate(
+            heapq.heappushpop(heapq_heap, new_item)
+        )
 
         # element that doesn't exist but not min
         min_item = min(items)
@@ -94,16 +96,22 @@ class TestMaxHeap:
             if new_item in items:
                 continue
 
-            assert max_heap.push_pop(new_item) == un_negate(heapq.heappushpop(heapq_heap, new_item))
+            assert max_heap.push_pop(new_item) == un_negate(
+                heapq.heappushpop(heapq_heap, new_item)
+            )
             break
 
         # element that already exist and min
         new_item = min(items)
-        assert max_heap.push_pop(new_item) == un_negate(heapq.heappushpop(heapq_heap, new_item))
+        assert max_heap.push_pop(new_item) == un_negate(
+            heapq.heappushpop(heapq_heap, new_item)
+        )
 
         # element that already exist and not min
         new_item = sorted(items)[1]
-        assert max_heap.push_pop(new_item) == un_negate(heapq.heappushpop(heapq_heap, new_item))
+        assert max_heap.push_pop(new_item) == un_negate(
+            heapq.heappushpop(heapq_heap, new_item)
+        )
 
     def test_to_list(self):
         assert MaxHeap().to_list() == []
@@ -121,7 +129,9 @@ class TestMaxHeap:
 
         # element that doesn't exist and min
         new_item = min(items) - 1
-        assert max_heap.replace(new_item) == un_negate(heapq.heapreplace(heapq_heap, new_item))
+        assert max_heap.replace(new_item) == un_negate(
+            heapq.heapreplace(heapq_heap, new_item)
+        )
 
         # element that doesn't exist and not min
         min_item = min(items)
@@ -129,16 +139,22 @@ class TestMaxHeap:
             if new_item in items:
                 continue
 
-            assert max_heap.replace(new_item) == un_negate(heapq.heapreplace(heapq_heap, new_item))
+            assert max_heap.replace(new_item) == un_negate(
+                heapq.heapreplace(heapq_heap, new_item)
+            )
             break
 
         # element that already exist and min
         new_item = min(items)
-        assert max_heap.replace(new_item) == un_negate(heapq.heapreplace(heapq_heap, new_item))
+        assert max_heap.replace(new_item) == un_negate(
+            heapq.heapreplace(heapq_heap, new_item)
+        )
 
         # element that already exist and not min
         new_item = sorted(items)[1]
-        assert max_heap.replace(new_item) == un_negate(heapq.heapreplace(heapq_heap, new_item))
+        assert max_heap.replace(new_item) == un_negate(
+            heapq.heapreplace(heapq_heap, new_item)
+        )
 
     def test_clear(self):
         max_heap = MaxHeap(create_random_list(self.MAX_VAL, self.SIZE))
