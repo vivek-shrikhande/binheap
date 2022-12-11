@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from binheap.heap import Heap
+from .heap import Heap
 
 
 class Inverted:

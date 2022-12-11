@@ -1,4 +1,4 @@
-from binheap.heap import Heap
+from .heap import Heap
 
 
 class MinHeap(Heap):
